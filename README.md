@@ -14,3 +14,5 @@ Abre `index.html` en el navegador. Las tareas se guardan en `localStorage`.
 ## Flujo de la demo
 
 Ver `GUIA-DEMO.md` para la secuencia exacta de comandos.
+
+Demo en vivo de Sapling SCM - Gestion de configuracion
