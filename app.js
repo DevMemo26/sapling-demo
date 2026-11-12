@@ -1,6 +1,7 @@
 const STORAGE_KEY = 'sapling-demo-tasks';
 
 let tasks = loadTasks();
+let currentFilter = 'all';
 
 function loadTasks() {
   try {
@@ -38,7 +39,13 @@ function render() {
   const list = document.getElementById('task-list');
   list.innerHTML = '';
 
-  tasks.forEach((task) => {
+  const visible = tasks.filter((task) => {
+     if (currentFilter === 'pending') return !task.done;
+     if (currentFilter === 'done') return task.done;
+     return true;
+   });
+
+  visible.forEach((task) => {
     const item = document.createElement('li');
     item.className = 'task' + (task.done ? ' task--done' : '');
 
@@ -64,6 +71,8 @@ function render() {
   });
 
   document.getElementById('stat-total').textContent = tasks.length;
+  const pending = tasks.filter((task) => !task.done).length;
+  document.getElementById('stat-pending').textContent = pending;
 }
 
 document.getElementById('task-form').addEventListener('submit', (event) => {
@@ -76,4 +85,14 @@ document.getElementById('task-form').addEventListener('submit', (event) => {
   input.focus();
 });
 
+document.getElementById('filters').addEventListener('click', (event) => {
+     const button = event.target.closest('.filter');
+     if (!button) return;
+     currentFilter = button.dataset.filter;
+     document
+       .querySelectorAll('.filter')
+       .forEach((el) => el.classList.toggle('is-active', el === button));
+     render();
+   });
+   
 render();

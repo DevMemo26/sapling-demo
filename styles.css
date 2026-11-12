@@ -139,3 +139,25 @@ body {
 .task__remove:hover {
   color: #d64545;
 }
+
+.app__filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter {
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filter.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
