@@ -85,6 +85,10 @@ document.getElementById('task-form').addEventListener('submit', (event) => {
   input.focus();
 });
 
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
 document.getElementById('filters').addEventListener('click', (event) => {
      const button = event.target.closest('.filter');
      if (!button) return;
