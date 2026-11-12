@@ -27,7 +27,13 @@
 
     <section class="app__stats">
       <span class="stat">Tareas: <strong id="stat-total">0</strong></span>
+      <span class="stat">Pendientes: <strong id="stat-pending">0</strong></span>
     </section>
+    <div class="app__filters" id="filters">
+      <button class="filter is-active" type="button" data-filter="all">Todas</button>
+      <button class="filter" type="button" data-filter="pending">Pendientes</button>
+      <button class="filter" type="button" data-filter="done">Completadas</button>
+    </div>
 
     <ul class="task-list" id="task-list"></ul>
   </main>
