@@ -139,3 +139,22 @@ body {
 .task__remove:hover {
   color: #d64545;
 }
+
+body.dark {
+  --bg: #111318;
+  --surface: #1b1e24;
+  --text: #e8eaed;
+  --text-muted: #9aa0a6;
+  --border: #2c313a;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.app__theme {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}

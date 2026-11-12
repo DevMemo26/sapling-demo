@@ -76,4 +76,8 @@ document.getElementById('task-form').addEventListener('submit', (event) => {
   input.focus();
 });
 
+document.getElementById('theme-toggle').addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
 render();
