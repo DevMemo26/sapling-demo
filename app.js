@@ -64,6 +64,8 @@ function render() {
   });
 
   document.getElementById('stat-total').textContent = tasks.length;
+  const pending = tasks.filter((task) => !task.done).length;
+  document.getElementById('stat-pending').textContent = pending;
 }
 
 document.getElementById('task-form').addEventListener('submit', (event) => {
