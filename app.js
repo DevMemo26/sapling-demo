@@ -35,6 +35,15 @@ function removeTask(id) {
   render();
 }
 
+/* DEMO 9(a) · Commit apilado 1 — "feat: boton para limpiar tareas completadas"
+   Descomenta esta función:
+function clearCompleted() {
+  tasks = tasks.filter((task) => !task.done);
+  saveTasks();
+  render();
+}
+*/
+
 function render() {
   const list = document.getElementById('task-list');
   list.innerHTML = '';
@@ -73,6 +82,11 @@ function render() {
   document.getElementById('stat-total').textContent = tasks.length;
   const pending = tasks.filter((task) => !task.done).length;
   document.getElementById('stat-pending').textContent = pending;
+  /* DEMO 9(a) · Commit apilado 2 — "feat: mostrar contador de tareas completadas"
+     Descomenta estas líneas:
+  const done = tasks.filter((task) => task.done).length;
+  document.getElementById('stat-done').textContent = done;
+  */
 }
 
 document.getElementById('task-form').addEventListener('submit', (event) => {
@@ -98,5 +112,27 @@ document.getElementById('filters').addEventListener('click', (event) => {
        .forEach((el) => el.classList.toggle('is-active', el === button));
      render();
    });
+
+/* DEMO 9(a) · Rama paralela "extras" — "feat: exportar tareas a JSON"
+   Descomenta esta función:
+function exportTasks() {
+  const blob = new Blob([JSON.stringify(tasks, null, 2)], {
+    type: 'application/json',
+  });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'tareas.json';
+  link.click();
+  URL.revokeObjectURL(url);
+}
+*/
+
+/* DEMO 9(a) · Listeners de los botones nuevos (van aquí, antes de render()).
+   En la rama "utilidades" descomenta la línea de clear-done;
+   en la rama "extras" descomenta la línea de export-tasks:
+document.getElementById('clear-done').addEventListener('click', clearCompleted);
+document.getElementById('export-tasks').addEventListener('click', exportTasks);
+*/
    
 render();
