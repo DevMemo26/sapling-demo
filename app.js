@@ -81,11 +81,8 @@ function render() {
   document.getElementById('stat-total').textContent = tasks.length;
   const pending = tasks.filter((task) => !task.done).length;
   document.getElementById('stat-pending').textContent = pending;
-  /* DEMO 9(a) · Commit apilado 2 — "feat: mostrar contador de tareas completadas"
-     Descomenta estas líneas:
   const done = tasks.filter((task) => task.done).length;
   document.getElementById('stat-done').textContent = done;
-  */
 }
 
 document.getElementById('task-form').addEventListener('submit', (event) => {
