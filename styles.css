@@ -186,7 +186,7 @@ body.dark {
    Descomenta el bloque correspondiente durante la demo.
    ============================================================ */
 
-/* Commit apilado 1 — "feat: boton para limpiar tareas completadas"
+
 .app__clear {
   margin-bottom: 16px;
   padding: 8px 14px;
@@ -202,7 +202,7 @@ body.dark {
   border-color: #d64545;
   color: #d64545;
 }
-*/
+
 
 /* Rama paralela "extras" — "feat: exportar tareas a JSON"
 .app__export {

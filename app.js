@@ -35,14 +35,13 @@ function removeTask(id) {
   render();
 }
 
-/* DEMO 9(a) · Commit apilado 1 — "feat: boton para limpiar tareas completadas"
-   Descomenta esta función:
+
 function clearCompleted() {
   tasks = tasks.filter((task) => !task.done);
   saveTasks();
   render();
 }
-*/
+
 
 function render() {
   const list = document.getElementById('task-list');
