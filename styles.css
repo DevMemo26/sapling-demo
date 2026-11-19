@@ -204,7 +204,7 @@ body.dark {
 }
 */
 
-/* Rama paralela "extras" — "feat: exportar tareas a JSON"
+
 .app__export {
   margin-top: 12px;
   margin-left: 8px;
@@ -220,4 +220,3 @@ body.dark {
   border-color: var(--accent);
   color: var(--accent);
 }
-*/

@@ -113,8 +113,7 @@ document.getElementById('filters').addEventListener('click', (event) => {
      render();
    });
 
-/* DEMO 9(a) · Rama paralela "extras" — "feat: exportar tareas a JSON"
-   Descomenta esta función:
+
 function exportTasks() {
   const blob = new Blob([JSON.stringify(tasks, null, 2)], {
     type: 'application/json',
@@ -126,13 +125,12 @@ function exportTasks() {
   link.click();
   URL.revokeObjectURL(url);
 }
-*/
 
-/* DEMO 9(a) · Listeners de los botones nuevos (van aquí, antes de render()).
-   En la rama "utilidades" descomenta la línea de clear-done;
-   en la rama "extras" descomenta la línea de export-tasks:
+
+
+
 document.getElementById('clear-done').addEventListener('click', clearCompleted);
 document.getElementById('export-tasks').addEventListener('click', exportTasks);
-*/
+
    
 render();
